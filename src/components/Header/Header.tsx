@@ -9,7 +9,7 @@ const Header = () => {
       <div></div>
       <div>
         <Button>Login</Button>
-        <Button>Register</Button>
+        <Button variant={'outlined'}>Register</Button>
       </div>
     </header>
   );
