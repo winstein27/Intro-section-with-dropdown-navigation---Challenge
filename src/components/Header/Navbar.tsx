@@ -13,7 +13,9 @@ const Navbar = () => {
 
   return (
     <nav className={classes.bar}>
-      <Logo className={classes.logo} title="snap logo" width={84} height={27} />
+      <div className={classes.logo}>
+        <Logo title="snap logo" width={84} height={27} />
+      </div>
       <div className={classes.menu}>
         <a
           href="#"

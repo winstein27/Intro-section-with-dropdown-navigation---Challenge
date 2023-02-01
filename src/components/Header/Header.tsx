@@ -10,7 +10,7 @@ const Header = () => {
     <header>
       <Navbar />
 
-      <div className={classes['header-section']}>
+      <div className={classes['header-btns']}>
         <Button>Login</Button>
         <Button variant={'outlined'}>Register</Button>
       </div>
