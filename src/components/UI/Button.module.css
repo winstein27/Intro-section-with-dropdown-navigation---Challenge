@@ -1,19 +1,20 @@
 .btn {
   padding: 8px 17px;
   margin: 0px 10px;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 98%);
   border: none;
-  color: grey;
+  color: hsl(0, 0%, 41%);
   text-align: center;
   font-weight: bold;
-  font-size: 14px;
+  font-size: inherit;
 }
 
 .btn:hover {
-  color: #000;
+  color: hsl(0, 0%, 8%);
+  border-color: hsl(0, 0%, 8%);
 }
 
 .btn-outlined {
-  border: 2px solid grey;
+  border: 2px solid hsl(0, 0%, 41%);
   border-radius: 12px;
 }

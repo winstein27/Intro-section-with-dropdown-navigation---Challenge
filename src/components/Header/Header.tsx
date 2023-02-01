@@ -1,13 +1,16 @@
 import React from 'react';
 
 import Button from '../UI/Button';
+import Navbar from './Navbar';
+
+import classes from './Header.module.css';
 
 const Header = () => {
   return (
     <header>
-      <div></div>
-      <div></div>
-      <div>
+      <Navbar />
+
+      <div className={classes['header-section']}>
         <Button>Login</Button>
         <Button variant={'outlined'}>Register</Button>
       </div>
