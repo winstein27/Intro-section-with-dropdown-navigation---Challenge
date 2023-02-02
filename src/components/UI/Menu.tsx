@@ -3,15 +3,16 @@ import React from 'react';
 import classes from './Menu.module.css';
 
 interface Props {
-  menuItems: { icon: React.ReactNode; text: string }[];
+  menuItems: { icon?: React.ReactNode; text: string }[];
+  onMouseLeave: () => void;
 }
 
-const Menu = ({ menuItems }: Props) => {
+const Menu = (props: Props) => {
   return (
-    <div className={classes.menu}>
-      {menuItems.map((menuItem) => (
-        <a>
-          <span>{menuItem.icon}</span>
+    <div className={classes.menu} onMouseLeave={props.onMouseLeave}>
+      {props.menuItems.map((menuItem) => (
+        <a href="!#">
+          {menuItem?.icon && <span>{menuItem.icon}</span>}
           {menuItem.text}
         </a>
       ))}

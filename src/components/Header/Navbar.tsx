@@ -20,9 +20,15 @@ const featureMenu = [
   { icon: <PlanningIcon />, text: 'Planning' },
 ];
 
+const companyMenu = [
+  { text: 'History' },
+  { text: 'Our Team' },
+  { text: 'Blog' },
+];
+
 const Navbar = () => {
-  const [hoverFeatures, setHoverFeatures] = useState(false);
-  const [hoverCompany, setHoverCompany] = useState(false);
+  const [isMenuFeaturesOpen, setIsMenuFeaturesOpen] = useState(false);
+  const [isMenuCompanyOpen, setIsMenuCompanyOpen] = useState(false);
 
   return (
     <nav className={classes.bar}>
@@ -30,29 +36,32 @@ const Navbar = () => {
         <Logo title="snap logo" width={84} height={27} />
       </div>
       <div className={classes.menu}>
-        <a
-          href="#"
-          onMouseEnter={() => setHoverFeatures(true)}
-          onMouseLeave={() => setHoverFeatures(false)}
-        >
+        <a href="!#" onMouseOver={() => setIsMenuFeaturesOpen(true)}>
           Features
-          {!hoverFeatures && <ArrowUp />}
-          {hoverFeatures && <ArrowDown />}
-          {hoverFeatures && <Menu menuItems={featureMenu} />}
+          {!isMenuFeaturesOpen && <ArrowUp />}
+          {isMenuFeaturesOpen && <ArrowDown />}
+          {isMenuFeaturesOpen && (
+            <Menu
+              menuItems={featureMenu}
+              onMouseLeave={() => setIsMenuFeaturesOpen(false)}
+            />
+          )}
         </a>
 
-        <a
-          href="#"
-          onMouseEnter={() => setHoverCompany(true)}
-          onMouseLeave={() => setHoverCompany(false)}
-        >
+        <a href="!#" onMouseEnter={() => setIsMenuCompanyOpen(true)}>
           Company
-          {!hoverCompany && <ArrowUp />}
-          {hoverCompany && <ArrowDown />}
+          {!isMenuCompanyOpen && <ArrowUp />}
+          {isMenuCompanyOpen && <ArrowDown />}
+          {isMenuCompanyOpen && (
+            <Menu
+              menuItems={companyMenu}
+              onMouseLeave={() => setIsMenuCompanyOpen(false)}
+            />
+          )}
         </a>
 
-        <a href="#">Carrers</a>
-        <a href="#">About</a>
+        <a href="!#">Carrers</a>
+        <a href="!#">About</a>
       </div>
     </nav>
   );
