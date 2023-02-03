@@ -34,8 +34,6 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - TypeScript - Programming Language
 - CSS Modules - For styles
@@ -71,7 +69,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Hoverable Dropdown](https://www.w3schools.com/howto/howto_css_dropdown.asp) - This helped me building the dropdown menu when hovered.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS - The Complete Guide 2023](https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/) - This is an amazing CSS course that I'm doing to improve my skills.
 
 ## Acknowledgments
 
