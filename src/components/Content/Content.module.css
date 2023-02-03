@@ -1,0 +1,19 @@
+.content {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.content h1 {
+  font-size: 70px;
+  color: hsl(0, 0%, 8%);
+}
+
+.content p {
+  margin: 0;
+}
+
+.content div {
+  width: 45%;
+  display: inline-block;
+}
