@@ -28,4 +28,6 @@
 
 .menu a svg {
   padding-left: 7px;
+  display: inline-block;
+  width: fit-content;
 }

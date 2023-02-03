@@ -38,8 +38,7 @@ const Navbar = () => {
       <div className={classes.menu}>
         <a href="!#" onMouseOver={() => setIsMenuFeaturesOpen(true)}>
           Features
-          {!isMenuFeaturesOpen && <ArrowUp />}
-          {isMenuFeaturesOpen && <ArrowDown />}
+          {!isMenuFeaturesOpen ? <ArrowUp /> : <ArrowDown />}
           {isMenuFeaturesOpen && (
             <Menu
               menuItems={featureMenu}
@@ -50,8 +49,7 @@ const Navbar = () => {
 
         <a href="!#" onMouseEnter={() => setIsMenuCompanyOpen(true)}>
           Company
-          {!isMenuCompanyOpen && <ArrowUp />}
-          {isMenuCompanyOpen && <ArrowDown />}
+          {!isMenuCompanyOpen ? <ArrowUp /> : <ArrowDown />}
           {isMenuCompanyOpen && (
             <Menu
               menuItems={companyMenu}

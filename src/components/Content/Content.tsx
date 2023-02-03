@@ -16,9 +16,9 @@ const Content = () => {
           Streamline processes, create team rituals, and watch productivity
           soar.
         </p>
-        <Button>Learn more</Button>
+        <Button variant="contained">Learn more</Button>
       </div>
-      <div>
+      <div className={classes.image}>
         <img src={HeroImg} alt="Remote work." width="540" height="720" />
       </div>
     </div>

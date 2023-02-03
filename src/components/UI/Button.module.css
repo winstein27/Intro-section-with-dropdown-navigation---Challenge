@@ -1,11 +1,12 @@
 .btn {
-  padding: 8px 17px;
+  padding: 15px 25px;
   margin: 0px 10px;
   background-color: hsl(0, 0%, 98%);
   border: none;
   color: hsl(0, 0%, 41%);
   text-align: center;
   font-size: inherit;
+  border-radius: 12px;
 }
 
 .btn:hover {
@@ -15,5 +16,15 @@
 
 .btn-outlined {
   border: 2px solid hsl(0, 0%, 41%);
-  border-radius: 12px;
+}
+
+.btn-contained {
+  border: 2px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 8%);
+}
+
+.btn-contained:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
 }
