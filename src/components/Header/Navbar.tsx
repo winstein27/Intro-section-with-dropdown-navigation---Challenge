@@ -11,8 +11,6 @@ import { ReactComponent as CalendarIcon } from '../../images/icon-calendar.svg';
 import { ReactComponent as RemindersIcon } from '../../images/icon-reminders.svg';
 import { ReactComponent as PlanningIcon } from '../../images/icon-planning.svg';
 
-import { ReactComponent as Logo } from '../../images/logo.svg';
-
 const featureMenu = [
   { icon: <TodoIcon />, text: 'Todo List' },
   { icon: <CalendarIcon />, text: 'Calendar' },
@@ -31,36 +29,39 @@ const Navbar = () => {
   const [isMenuCompanyOpen, setIsMenuCompanyOpen] = useState(false);
 
   return (
-    <nav className={classes.bar}>
-      <div className={classes.logo}>
-        <Logo title="snap logo" width={84} height={27} />
-      </div>
-      <div className={classes.menu}>
-        <a href="!#" onMouseOver={() => setIsMenuFeaturesOpen(true)}>
-          Features
-          {!isMenuFeaturesOpen ? <ArrowUp /> : <ArrowDown />}
-          {isMenuFeaturesOpen && (
-            <Menu
-              menuItems={featureMenu}
-              onMouseLeave={() => setIsMenuFeaturesOpen(false)}
-            />
-          )}
-        </a>
-
-        <a href="!#" onMouseEnter={() => setIsMenuCompanyOpen(true)}>
-          Company
-          {!isMenuCompanyOpen ? <ArrowUp /> : <ArrowDown />}
-          {isMenuCompanyOpen && (
-            <Menu
-              menuItems={companyMenu}
-              onMouseLeave={() => setIsMenuCompanyOpen(false)}
-            />
-          )}
-        </a>
-
-        <a href="!#">Carrers</a>
-        <a href="!#">About</a>
-      </div>
+    <nav className={classes.navbar}>
+      <ul className={classes.menu}>
+        <li>
+          <a href="!#" onMouseOver={() => setIsMenuFeaturesOpen(true)}>
+            Features
+            {!isMenuFeaturesOpen ? <ArrowUp /> : <ArrowDown />}
+            {isMenuFeaturesOpen && (
+              <Menu
+                menuItems={featureMenu}
+                onMouseLeave={() => setIsMenuFeaturesOpen(false)}
+              />
+            )}
+          </a>
+        </li>
+        <li>
+          <a href="!#" onMouseEnter={() => setIsMenuCompanyOpen(true)}>
+            Company
+            {!isMenuCompanyOpen ? <ArrowUp /> : <ArrowDown />}
+            {isMenuCompanyOpen && (
+              <Menu
+                menuItems={companyMenu}
+                onMouseLeave={() => setIsMenuCompanyOpen(false)}
+              />
+            )}
+          </a>
+        </li>
+        <li>
+          <a href="!#">Carrers</a>
+        </li>
+        <li>
+          <a href="!#">About</a>
+        </li>
+      </ul>
     </nav>
   );
 };

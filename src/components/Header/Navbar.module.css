@@ -1,11 +1,9 @@
-.bar {
+.navbar {
   display: inline-block;
-  list-style-type: none;
-  height: auto;
 }
 
-.logo {
-  margin: 30px;
+.navbar li {
+  list-style-type: none;
   display: inline-block;
 }
 
