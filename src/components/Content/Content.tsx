@@ -13,7 +13,11 @@ const Content = () => {
 
   return (
     <main className={classes.content}>
-      {isDesktopScreen ? <DesktopContent /> : <MobileContent />}
+      {isDesktopScreen ? (
+        <DesktopContent />
+      ) : (
+        <MobileContent width={windowWidth} />
+      )}
     </main>
   );
 };
