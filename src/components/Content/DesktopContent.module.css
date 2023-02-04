@@ -1,0 +1,25 @@
+.content {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content h1 {
+  font-size: 70px;
+  color: hsl(0, 0%, 8%);
+  margin-bottom: 40px;
+}
+
+.content p {
+  margin: 0;
+  line-height: 30px;
+}
+
+.content button {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.image {
+  text-align: right;
+}
