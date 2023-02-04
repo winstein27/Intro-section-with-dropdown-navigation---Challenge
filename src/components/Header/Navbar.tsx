@@ -34,26 +34,26 @@ const Navbar = () => {
         <li key="1">
           <a href="!#" onMouseOver={() => setIsMenuFeaturesOpen(true)}>
             Features
-            {!isMenuFeaturesOpen ? <ArrowUp /> : <ArrowDown />}
-            {isMenuFeaturesOpen && (
-              <Menu
-                menuItems={featureMenu}
-                onMouseLeave={() => setIsMenuFeaturesOpen(false)}
-              />
-            )}
           </a>
+          {!isMenuFeaturesOpen ? <ArrowUp /> : <ArrowDown />}
+          {isMenuFeaturesOpen && (
+            <Menu
+              menuItems={featureMenu}
+              onMouseLeave={() => setIsMenuFeaturesOpen(false)}
+            />
+          )}
         </li>
         <li key="2">
           <a href="!#" onMouseEnter={() => setIsMenuCompanyOpen(true)}>
             Company
-            {!isMenuCompanyOpen ? <ArrowUp /> : <ArrowDown />}
-            {isMenuCompanyOpen && (
-              <Menu
-                menuItems={companyMenu}
-                onMouseLeave={() => setIsMenuCompanyOpen(false)}
-              />
-            )}
           </a>
+          {!isMenuCompanyOpen ? <ArrowUp /> : <ArrowDown />}
+          {isMenuCompanyOpen && (
+            <Menu
+              menuItems={companyMenu}
+              onMouseLeave={() => setIsMenuCompanyOpen(false)}
+            />
+          )}
         </li>
         <li key="3">
           <a href="!#">Carrers</a>

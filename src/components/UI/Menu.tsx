@@ -10,8 +10,8 @@ interface Props {
 const Menu = (props: Props) => {
   return (
     <div className={classes.menu} onMouseLeave={props.onMouseLeave}>
-      {props.menuItems.map((menuItem) => (
-        <a href="!#">
+      {props.menuItems.map((menuItem, index) => (
+        <a key={index} href="!#">
           {menuItem?.icon && <span>{menuItem.icon}</span>}
           {menuItem.text}
         </a>
