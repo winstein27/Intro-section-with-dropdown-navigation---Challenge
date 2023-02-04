@@ -70,6 +70,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Hoverable Dropdown](https://www.w3schools.com/howto/howto_css_dropdown.asp) - This helped me building the dropdown menu when hovered.
 - [CSS - The Complete Guide 2023](https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/) - This is an amazing CSS course that I'm doing to improve my skills.
+- [Developing responsive layouts with React Hooks](https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/) - This is a blog post that shows how to use React Hooks to develop responsive designs without CSS tools.
 
 ## Acknowledgments
 

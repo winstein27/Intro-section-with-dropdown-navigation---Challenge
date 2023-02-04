@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav className={classes.navbar}>
       <ul className={classes.menu}>
-        <li>
+        <li key="1">
           <a href="!#" onMouseOver={() => setIsMenuFeaturesOpen(true)}>
             Features
             {!isMenuFeaturesOpen ? <ArrowUp /> : <ArrowDown />}
@@ -43,7 +43,7 @@ const Navbar = () => {
             )}
           </a>
         </li>
-        <li>
+        <li key="2">
           <a href="!#" onMouseEnter={() => setIsMenuCompanyOpen(true)}>
             Company
             {!isMenuCompanyOpen ? <ArrowUp /> : <ArrowDown />}
@@ -55,10 +55,10 @@ const Navbar = () => {
             )}
           </a>
         </li>
-        <li>
+        <li key="3">
           <a href="!#">Carrers</a>
         </li>
-        <li>
+        <li key="4">
           <a href="!#">About</a>
         </li>
       </ul>

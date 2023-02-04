@@ -7,3 +7,8 @@
   float: right;
   padding: 30px;
 }
+
+.menu-mobile {
+  float: right;
+  padding: 30px 10px;
+}
