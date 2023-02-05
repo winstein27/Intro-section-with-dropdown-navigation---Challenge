@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import classes from './Header.module.css';
 
 import Button from '../UI/Button';
 import Navbar from './Navbar';
+import MobileMenuDialog from './MobileMenuDialog';
 
 import { ReactComponent as Logo } from '../../images/logo.svg';
 import { ReactComponent as MenuIcon } from '../../images/icon-menu.svg';
@@ -11,8 +12,14 @@ import { ReactComponent as MenuIcon } from '../../images/icon-menu.svg';
 import useViewport from '../../hooks/useViewport';
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsOpenMenuOpen] = useState(false);
+
   const windowWidth = useViewport();
   const isDesktopScreen = windowWidth > 1100;
+
+  const closeMobileMenu = () => {
+    setIsOpenMenuOpen(false);
+  };
 
   return (
     <header>
@@ -29,7 +36,8 @@ const Header = () => {
         </>
       ) : (
         <div className={classes['menu-mobile']}>
-          <MenuIcon />
+          <MenuIcon onClick={() => setIsOpenMenuOpen(true)} />
+          {isMobileMenuOpen && <MobileMenuDialog closeMenu={closeMobileMenu} />}
         </div>
       )}
     </header>
