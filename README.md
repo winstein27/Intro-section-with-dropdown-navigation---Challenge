@@ -12,7 +12,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -26,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./solution-screenshots/shot-1.png)
 
 ## My process
 
@@ -34,44 +33,61 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS Box Model
 - [React](https://reactjs.org/) - JS library
 - TypeScript - Programming Language
 - CSS Modules - For styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+How to get the user's screen width to show an appropriate view. If the size changes, the view maybe change too. I wrote a React Custom Hook the deal with this requirement:
 
-To see how you can add code snippets, see below:
+```ts
+const useViewport = () => {
+  const [width, setWidth] = useState(window.screen.width);
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(() => {
+      setWidth(window.screen.width);
+    });
+
+    resizeObserver.observe(document.body);
+  }, []);
+
+  return width;
+};
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+Thinking in reusability, some UI components were built to used in the entire application:
+
+```ts
+const Button = (props: Props) => {
+  let btnClasses = classes.btn;
+
+  btnClasses += props.fullSize ? ` ${classes.full} ` : ' ';
+  if (props?.variant === 'outlined') {
+    btnClasses += classes['btn-outlined'];
+  }
+  if (props?.variant === 'contained') {
+    btnClasses += classes['btn-contained'];
+  }
+
+  return <button className={btnClasses}>{props.children}</button>;
+};
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
+```ts
+const Backdrop = (props: Props) => {
+  return <div onClick={props.onClick} className={classes.backdrop}></div>;
 };
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+While developing this project, I realized that I have to improve one basic skill, CSS. I'm taking Schwarzmüller's CSS course and trying to solve Frontend Mentor Challenges to fill that gap. Furthermore, applying React concepts as important as well.
 
 ### Useful resources
 
 - [Hoverable Dropdown](https://www.w3schools.com/howto/howto_css_dropdown.asp) - This helped me building the dropdown menu when hovered.
 - [CSS - The Complete Guide 2023](https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/) - This is an amazing CSS course that I'm doing to improve my skills.
 - [Developing responsive layouts with React Hooks](https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/) - This is a blog post that shows how to use React Hooks to develop responsive designs without CSS tools.
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
