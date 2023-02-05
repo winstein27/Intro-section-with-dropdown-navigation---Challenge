@@ -17,3 +17,13 @@
 .content button {
   margin-top: 30px;
 }
+
+.client {
+  margin-top: 20px;
+  text-align: center;
+  padding: 25px 5px;
+}
+
+.client > svg {
+  margin: 10px 5px;
+}

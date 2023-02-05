@@ -6,6 +6,11 @@ import Button from '../UI/Button';
 
 import HeroImg from '../../images/image-hero-mobile.png';
 
+import { ReactComponent as DatabizLogo } from '../../images/client-databiz.svg';
+import { ReactComponent as AudioPhileLogo } from '../../images/client-audiophile.svg';
+import { ReactComponent as MeetLogo } from '../../images/client-meet.svg';
+import { ReactComponent as MakerLogo } from '../../images/client-maker.svg';
+
 const MobileContent = ({ width }: { width: number }) => {
   return (
     <>
@@ -17,6 +22,12 @@ const MobileContent = ({ width }: { width: number }) => {
           create team rituals, and watch productivity soar.
         </p>
         <Button variant="contained">Learn more</Button>
+      </div>
+      <div className={classes.client}>
+        <DatabizLogo />
+        <AudioPhileLogo />
+        <MeetLogo />
+        <MakerLogo />
       </div>
     </>
   );

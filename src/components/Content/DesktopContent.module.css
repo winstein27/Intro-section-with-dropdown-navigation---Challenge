@@ -20,6 +20,15 @@
   margin-top: 40px;
 }
 
+.client {
+  margin: 100px 10px;
+  text-align: center;
+}
+
+.client > svg {
+  margin: 20px;
+}
+
 .image {
   text-align: right;
 }
