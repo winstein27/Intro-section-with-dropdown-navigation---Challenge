@@ -12,6 +12,7 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
+ - [Author](#author)
 
 ## Overview
 
@@ -91,3 +92,9 @@ While developing this project, I realized that I have to improve one basic skill
 - [Hoverable Dropdown](https://www.w3schools.com/howto/howto_css_dropdown.asp) - This helped me building the dropdown menu when hovered.
 - [CSS - The Complete Guide 2023](https://www.udemy.com/course/css-the-complete-guide-incl-flexbox-grid-sass/) - This is an amazing CSS course that I'm doing to improve my skills.
 - [Developing responsive layouts with React Hooks](https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/) - This is a blog post that shows how to use React Hooks to develop responsive designs without CSS tools.
+
+## Author
+
+- LinkedIn - [Winstein Martins](https://www.linkedin.com/in/winstein-martins/)
+- Frontend Mentor - [@winstein27](https://www.frontendmentor.io/profile/winstein27)
+
